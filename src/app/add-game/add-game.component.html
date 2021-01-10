@@ -1,0 +1,35 @@
+<div class="container">
+<div>
+<h2>Ajouter un jeu de table :</h2>
+</div>
+  <form >
+<div class="col-sm-2 col-md-2 col-lg-2">
+<label >N°: jeu de table </label>
+<input type="number" [(ngModel)]="newGame.gameId"
+name="gameId" class="form-control">
+</div>
+<div class="col-sm-4 col-md-4 col-lg-4" >
+<label >Nom de jeu </label>
+<input type="text"[(ngModel)]= "newGame.gameName"
+name="gameName" class="form-control">
+</div>
+
+<div class="col-sm-2 col-md-2 col-lg-2">
+<label >Prix de jeu</label>
+<input type="text" [(ngModel)]= "newGame.gamePrice"
+name="gamePrice" class="form-control">
+</div>
+
+
+<div class="col-sm-2 col-md-2 col-lg-2">
+  <label for="example-datetime-local-input">Date de création de jeu</label>
+  <input  [(ngModel)]= "newGame.orderDate" name="orderDate" class="form-control" type="date" >
+  </div>
+
+
+
+<div class="mt-2">
+<button type="submit" (click)="addGame()" class="btn btn-outline-success">Ajouter</button>
+</div>
+</form>
+</div>

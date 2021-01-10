@@ -1,0 +1,25 @@
+<div class="container">
+<div class="card shadow mb-4">
+<div class="card-body">
+<table class="table table-striped">
+<tr> 
+  <th>N°: jeu de table</th>
+  <th>Nom de jeu</th> 
+  <th>Prix de jeu</th>
+   <th>Date de creation de jeu</th></tr>
+<tbody *ngFor="let game of games">
+<tr >
+<td>{{game.gameId}}</td>
+<td>{{game.gameName}}</td>
+<td>{{game.gamePrice}}</td>
+<td>{{game.orderDate | date: 'dd/MM/yyyy'}}</td>
+
+  <td><a class="btn btn-danger" (click)="deleteGame(game)">Supprimer</a></td>
+  <td><a class="btn btn-success" [routerLink]="['/updateGame',game.gameId]">Modifier</a></td>
+
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
